@@ -21,12 +21,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git gitignore history vi-mode history-substring-search-patched zsh-syntax-highlighting)
 
-source .zshrc.platform.plugins
+source $HOME/.zshrc.platform.plugins
 
 source $ZSH/oh-my-zsh.sh
 
 #source .zshrc.platform.post
-source .zshrc.platform
+source $HOME/.zshrc.platform
 
 # zsh-related aliases
 alias zshconfig="$EDITOR ~/.zshrc"
