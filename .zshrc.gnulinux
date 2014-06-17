@@ -1,0 +1,19 @@
+export EDITOR='vim'
+
+export TERM=xterm-256color
+
+eval `dircolors ~/.solarized_dir_colors`                                        
+#eval `dircolors ~/.dir_colors`
+
+function rmSymlinksTo {                                                         
+  find -type l | while IFS= read -r lnk                                         
+  do                                                                            
+    if readlink -f "$lnk" | grep -q '^'$HOME'/sw/'$1       
+    then                                                                        
+      echo "rm $lnk …"                                                          
+      #rm "$lnk"                                                                
+    fi                                                                          
+  done                                                                          
+} 
+
+alias rocks='ssh rocks'
