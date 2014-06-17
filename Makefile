@@ -1,6 +1,7 @@
 zsh=$(HOME)/.oh-my-zsh
 zshCustom=$(zsh)/custom
 customThemes=$(zshCustom)/themes
+customPlugins=$(zshCustom)/plugins
 
 # Set default theme
 installtheme: installtheme-pure
@@ -26,3 +27,7 @@ installrc-gnulinux: installrc
 .PHONY: installrc
 installrc:
 	cp .zshrc $(HOME)/.zshrc
+
+.PHONY: installhistory-substring-search-patched
+installhistory-substring-search-patched:
+	cp -r history-substring-search-patched $(customPlugins)
