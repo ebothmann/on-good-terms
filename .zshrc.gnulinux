@@ -11,7 +11,7 @@ function rmSymlinksTo {
     if readlink -f "$lnk" | grep -q '^'$HOME'/sw/'$1       
     then                                                                        
       echo "rm $lnk …"                                                          
-      #rm "$lnk"                                                                
+      rm "$lnk"                                                                
     fi                                                                          
   done                                                                          
 } 
